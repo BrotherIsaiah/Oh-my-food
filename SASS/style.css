@@ -148,9 +148,6 @@ footer {
   .restaurant {
     margin-inline-start: 10%;
   }
-  .footer-desk img {
-    width: 10%;
-  }
   .footer-desk {
     display: flex;
     flex-direction: row-reverse;
@@ -159,5 +156,8 @@ footer {
   .footer-desk ul {
     display: flex;
     gap: 15px;
+  }
+  .footer-desk img {
+    width: 10%;
   }
 }/*# sourceMappingURL=style.css.map */

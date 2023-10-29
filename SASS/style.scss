@@ -173,20 +173,20 @@ display: grid;
     margin-inline-start: 10%;
 }
 
-.footer-desk img{
-    width: 10%;
-}
     
 .footer-desk{
     display: flex;
   flex-direction: row-reverse;
   gap: 15px;
+  ul{
+    display: flex;
+    gap: 15px;
+  }
+  img{
+    width: 10%;
+  }
 }
 
-.footer-desk ul{
-    
-  display: flex;
-  gap: 15px;
-}
+
 
 }
