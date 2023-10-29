@@ -38,6 +38,10 @@ $background-color:#F6F6F6;
     margin: 0 20px 0 20px;
 }
 
+@mixin head-menu{
+    display: flex;
+  align-items: center;
+}
 
 /* Code */
 *{font-family: 'Raleway', sans-serif;
@@ -72,7 +76,7 @@ h1{
     }
 }
 
-button{
+.explore-order{
     @include button-link;
     background: $button-form;
 }
@@ -136,6 +140,16 @@ img{
     filter: invert(100%);
     width: 30%;
 }
+}
+
+.previous-icon{
+    font-size: 30px;
+}
+
+.resto-img{
+    object-fit: cover;
+    width: 100%;
+    height: 275px;
 }
 
 /* Desktop */
