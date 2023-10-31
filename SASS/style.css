@@ -188,11 +188,20 @@ footer .footer-desk img {
   gap: 1em;
 }
 
+.order {
+  padding-block: 1em;
+  display: flex;
+  justify-content: center;
+}
+
 /* Desktop */
 @media screen and (min-width: 768px) {
   header img {
     margin: 0 40%;
     width: 20%;
+  }
+  .head-resto {
+    padding-inline: 1em;
   }
   .function-desk {
     display: flex;
@@ -213,16 +222,27 @@ footer .footer-desk img {
   .restaurant {
     margin-inline-start: 10%;
   }
-  .footer-desk {
+  footer {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    height: 4em;
+  }
+  footer .footer-desk {
     display: flex;
     flex-direction: row-reverse;
-    gap: 15px;
+    gap: 4.5em;
+    justify-content: end;
+    align-items: end;
   }
-  .footer-desk ul {
+  footer .footer-desk ul {
     display: flex;
     gap: 15px;
+    flex-direction: row;
+    align-items: end;
+    margin: 0;
   }
-  .footer-desk img {
-    width: 10%;
+  footer .footer-desk img {
+    width: 15%;
   }
 }/*# sourceMappingURL=style.css.map */
