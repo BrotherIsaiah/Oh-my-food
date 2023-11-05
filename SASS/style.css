@@ -153,6 +153,9 @@ footer .footer-desk img {
 
 .menu {
   background: #f6f6f6;
+  margin-top: -5%;
+  z-index: 10;
+  position: relative;
 }
 
 .menu-head {
@@ -164,7 +167,7 @@ footer .footer-desk img {
   font: 2.2rem "Shrikhand";
   text-align: center;
 }
-.menu-head .fa-regular {
+.menu-head .fa-heart {
   font-size: xx-large;
 }
 
@@ -199,6 +202,20 @@ footer .footer-desk img {
 }
 .menu-details p {
   margin: 0;
+}
+.menu-details .check {
+  width: 20%;
+  display: flex;
+  background: gray;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.menu-details .check:hover {
+  color: #99E2D0;
+}
+.menu-details .check .fa-circle-check {
+  font-size: xx-large;
 }
 
 .menu-content {

@@ -173,7 +173,9 @@ footer {
 
 .menu{
     background: $background-color;
-
+    margin-top: -5%;
+    z-index: 10;
+    position: relative;
 }
 
 .menu-head{
@@ -184,9 +186,9 @@ footer {
         font: 2.2rem "Shrikhand";
         text-align: center;
     }
-    .fa-regular{
+    .fa-heart{
         font-size: xx-large;
-    }
+}
 }
 
 .menu-align{
@@ -221,6 +223,20 @@ footer {
   & p{
     margin: 0;
   }
+  .check{
+    width: 20%;
+  display: flex;
+  background: gray;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+    &:hover{
+      color: #99E2D0;
+    }
+    .fa-circle-check{
+      font-size: xx-large;
+    }
+  }
 }
 
 .menu-content{
@@ -234,6 +250,8 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+
 /* Desktop */
 
 @media screen and (min-width: 768px) {
@@ -311,6 +329,4 @@ footer {
     
   }
 }
-
-
 }
