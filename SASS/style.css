@@ -213,6 +213,25 @@ footer .footer-desk img {
   justify-content: center;
 }
 
+.check-hover {
+  display: flex;
+}
+.check-hover:hover .check {
+  transition: 300ms;
+  transform: translate;
+  display: flex;
+  background: aquamarine;
+  width: 10%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+.check-hover:hover .check .fa-circle-check {
+  display: none;
+  font-size: xx-large;
+}
+
 /* Desktop */
 @media screen and (min-width: 768px) {
   header img {
