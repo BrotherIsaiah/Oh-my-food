@@ -213,25 +213,52 @@ footer .footer-desk img {
   justify-content: center;
 }
 
+.fa-circle-check {
+  display: none;
+}
+
 .check-hover {
   display: flex;
 }
 .check-hover:hover .check {
-  transition: 300ms;
-  transform: translate;
-  display: flex;
-  background: aquamarine;
-  width: 10%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  color: aliceblue;
+  animation: check-slide 2s linear;
 }
 .check-hover:hover .check .fa-circle-check {
-  display: none;
-  font-size: xx-large;
+  display: inline;
 }
 
+@keyframes check-slide {
+  0% {
+    transform: translateX(0);
+    border-radius: 0 20px 20px 0;
+    background: #99E2D0;
+    width: 0%;
+  }
+  25% {
+    transform: translateX(0);
+    background: #99E2D0;
+    width: 6%;
+    border-radius: 0 20px 20px 0;
+  }
+  50% {
+    transform: translateX(0);
+    background: #99E2D0;
+    width: 12%;
+    border-radius: 0 20px 20px 0;
+  }
+  75% {
+    transform: translateX(0);
+    background: #99E2D0;
+    width: 20%;
+    border-radius: 0 20px 20px 0;
+  }
+  100% {
+    transform: translateX(0);
+    border-radius: 0 20px 20px 0;
+    background: #99E2D0;
+    width: 0%;
+  }
+}
 /* Desktop */
 @media screen and (min-width: 768px) {
   header img {
