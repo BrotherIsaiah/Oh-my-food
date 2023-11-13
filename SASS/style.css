@@ -58,6 +58,18 @@ h1 {
 .function-desk {
   display: grid;
   gap: 1em;
+  padding-block-end: 1em;
+}
+
+.step123 {
+  background: #9356dc;
+  border-radius: 50%;
+  width: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 61px;
+  margin-left: -8px;
 }
 
 .fonctionnement {
@@ -98,6 +110,10 @@ h1 {
   justify-content: space-between;
   flex-direction: column;
   gap: 20px;
+}
+.resto-cards a {
+  text-decoration: none;
+  color: black;
 }
 
 .card-content {
@@ -149,6 +165,10 @@ footer .footer-desk img {
 .head-resto {
   display: flex;
   align-items: center;
+}
+.head-resto a {
+  color: black;
+  margin-inline-start: 1em;
 }
 
 .menu {
@@ -205,20 +225,6 @@ footer .footer-desk img {
   margin: 0;
   margin-inline-end: 1em;
 }
-.menu-details .check {
-  width: 20%;
-  display: flex;
-  background: gray;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.menu-details .check:hover {
-  color: #99E2D0;
-}
-.menu-details .check .fa-circle-check {
-  font-size: xx-large;
-}
 
 .menu-content {
   display: flex;
@@ -264,37 +270,6 @@ footer .footer-desk img {
     width: 20%;
   }
 }
-/*animation: check-slide 2s linear alternate;*/
-/*
-@keyframes check-slide{
-  0% {transform: translateX(0);
-    border-radius: 0 20px 20px 0;
-  background: #99E2D0;
-    width: 0%;}
-
-  25%{transform: translateX(0);
-    background: #99E2D0;
-    width: 6%;
-    border-radius: 0 20px 20px 0;}
-
-  50%{transform: translateX(0);
-    background: #99E2D0;
-    width: 12%;
-    border-radius: 0 20px 20px 0;
-  }
-
-  75%{transform: translateX(0);
-    background: #99E2D0;
-    width: 20%;
-    border-radius: 0 20px 20px 0;}
-
-    100%{transform: translateX(0);
-      background: #99E2D0;
-      width: 0%;
-      border-radius: 0 20px 20px 0;}
-
-}
-*/
 /* Desktop */
 @media screen and (min-width: 768px) {
   header img {
@@ -307,6 +282,10 @@ footer .footer-desk img {
   .function-desk {
     display: flex;
     justify-content: center;
+    padding-block-end: 1em;
+  }
+  .function-section {
+    margin-inline: 2%;
   }
   .fonctionnement {
     width: 20%;
@@ -360,5 +339,8 @@ footer .footer-desk img {
   }
   .menu .menu-align {
     margin-inline: 10%;
+  }
+  .menu-details p {
+    margin-inline-end: 2em;
   }
 }/*# sourceMappingURL=style.css.map */

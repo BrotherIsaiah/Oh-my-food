@@ -89,7 +89,21 @@ h1 {
 .function-desk{
   display: grid;
   gap: 1em;
+  padding-block-end: 1em;
 }
+
+.step123{
+  background: #9356dc;
+  border-radius: 50%;
+  width: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 61px;
+  margin-left: -8px;
+}
+
+
 
 .fonctionnement {
   @include fonctionnement;
@@ -118,7 +132,13 @@ h1 {
   justify-content: space-between;
   flex-direction: column;
   gap: 20px;
+  a{
+    text-decoration: none;
+    color: black;
+  }
 }
+
+
 
 .card-content {
   display: flex;
@@ -128,6 +148,8 @@ h1 {
   .fa-heart{
     font-size: xx-large;
   }
+  
+  
 }
 
 footer {
@@ -169,6 +191,10 @@ footer {
 .head-resto {
   display: flex;
   align-items: center;
+  a{
+    color: black;
+    margin-inline-start: 1em;
+  }
 }
 
 .menu{
@@ -225,20 +251,6 @@ footer {
     margin: 0;
     margin-inline-end: 1em;
   }
-  .check{
-    width: 20%;
-  display: flex;
-  background: gray;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-    &:hover{
-      color: #99E2D0;
-    }
-    .fa-circle-check{
-      font-size: xx-large;
-    }
-  }
 }
 
 .menu-content{
@@ -251,6 +263,47 @@ footer {
   padding-block: 1em;
   display: flex;
   justify-content: center;
+}
+
+.check-hover{
+  display: flex;
+  
+   &:hover{
+     .check{
+     
+       animation: sliding 400ms linear;
+       display: flex;
+   justify-content: center;
+   align-items: center;
+       width: 20%;
+       border-radius: 0 20px 20px 0;
+       background: #99E2D0;
+       font-size: 2.5em;
+   color: white;
+       .fa-circle-check{
+         display: inline;
+         
+       }
+   }
+ }
+ .fa-circle-check{
+   display: none;
+ }
+ }
+ 
+
+@keyframes sliding{
+  0%{
+    width: 0%;
+  }
+
+50%{
+  width: 10%;
+}
+
+100%{
+  width: 20%;
+}
 }
 /* Desktop */
 
@@ -268,6 +321,11 @@ footer {
   .function-desk {
     display: flex;
     justify-content: center;
+    padding-block-end: 1em;
+  }
+
+  .function-section{
+    margin-inline: 2%;
   }
 
   .fonctionnement {
@@ -329,4 +387,11 @@ footer {
     
   }
 }
+
+.menu-details{
+  p{
+    margin-inline-end: 2em;
+  }
 }
+}
+
