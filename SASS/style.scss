@@ -221,6 +221,7 @@ footer {
   }
   & p{
     margin: 0;
+    margin-inline-end: 1em;
   }
 }
 
@@ -242,10 +243,9 @@ footer {
  display: flex;
  
   &:hover{
-
-transition: width 1s ease-in-out ;
     .check{
-      animation: sliding 2s alternate ease-in-out;
+    
+      animation: sliding 400ms linear;
       display: flex;
   justify-content: center;
   align-items: center;
