@@ -217,11 +217,13 @@ footer {
   background: white;
   border-radius: 20px;
   padding: 1em;
+  margin-right: -5%;
   & h3 {
     margin: 0;
   }
   & p{
     margin: 0;
+    margin-inline-end: 1em;
   }
   .check{
     width: 20%;
@@ -250,8 +252,6 @@ footer {
   display: flex;
   justify-content: center;
 }
-
-
 /* Desktop */
 
 @media screen and (min-width: 768px) {
