@@ -52,6 +52,8 @@ body {
 .localisation {
   background-color: $location-color;
   @include icon-info;
+  color: #353535;
+  font-size: x-large;
 }
 
 header {
@@ -88,7 +90,6 @@ h1 {
 
 .function-desk{
   display: grid;
-  gap: 1em;
   padding-block-end: 1em;
 }
 
@@ -99,7 +100,7 @@ h1 {
   color: white;
   text-align: center;
   position: relative;
-  top: 61px;
+  top: 48px;
   margin-left: -8px;
 }
 
@@ -199,10 +200,13 @@ footer {
 
 .menu{
     background: $background-color;
-    margin-top: -5%;
+    margin-top: -8%;
     z-index: 10;
     position: relative;
+    border-radius: 40px;
 }
+
+
 
 .menu-head{
     display: flex;
@@ -314,26 +318,52 @@ footer {
     width: 20%;
   }
 
+.text-intro{
+ h1{
+  font-size: xxx-large;
+ }
+ 
+  p{
+    color: #353535;
+  }
+}
+
   .head-resto{
     padding-inline: 1em;
   }
+
+
 
   .function-desk {
     display: flex;
     justify-content: center;
     padding-block-end: 1em;
+    gap: 1em;
+    align-items: flex-start;
   }
 
   .function-section{
     margin-inline: 2%;
+    h2{
+      margin-inline-start: 5%;
+    }
   }
 
   .fonctionnement {
     width: 20%;
   }
 
+  .step123{
+    top: 38%;
+    left: 1.5em;
+  
+}
+
   .resto-section {
     padding: 2em;
+    h2{
+      margin-inline-start: 5%;
+    }
   }
 
   .resto-cards {
@@ -395,3 +425,25 @@ footer {
 }
 }
 
+.check-hover{
+  display: flex;
+  
+   &:hover{
+     .check{
+      animation: sliding-desk 400ms linear;
+      width: 15%;}
+     }
+    }
+    @keyframes sliding-desk{
+      0%{
+        width: 0%;
+      }
+    
+    50%{
+      width: 7.5%;
+    }
+    
+    100%{
+      width: 15%;
+    }
+    }
