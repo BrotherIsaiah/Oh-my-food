@@ -58,8 +58,10 @@ body {
 
 header {
   img {
-    margin: 0 25%;
-    padding: 10px;
+    margin-inline: 20%;
+    padding: 1em;
+    width: 50%;
+    height: 30%;
   }
 }
 
@@ -78,10 +80,17 @@ h1 {
   }
 }
 
-.explore-order {
-  @include button-link;
-  background: $button-form;
-}
+
+  
+  .explore-order {
+    @include button-link;
+    background: $button-form;
+    color: white;
+  cursor: pointer;
+  text-decoration: none;
+  }
+
+
 
 .function-section {
   display: grid;
