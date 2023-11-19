@@ -53,7 +53,7 @@ body {
   background-color: $location-color;
   @include icon-info;
   color: #353535;
-  font-size: x-large;
+  
 }
 
 header {
@@ -80,7 +80,9 @@ h1 {
   }
 }
 
-
+.margin-button{
+  margin-block: 3em;
+}
   
   .explore-order {
     @include button-link;
@@ -88,6 +90,7 @@ h1 {
     color: white;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
   }
 
 
@@ -117,6 +120,7 @@ h1 {
   @include fonctionnement;
   @include icon-info;
   background: $background-color;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
 }
 
 .resto-section {
@@ -173,6 +177,12 @@ footer {
     li {
       display: flex;
       gap: 10px;
+      a{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        gap: 0.5em;
+      }
     }
     img {
       filter: invert(100%);
