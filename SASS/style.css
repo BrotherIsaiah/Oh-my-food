@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Variables */
 /* Mixin */
 /* Code */
@@ -153,6 +152,7 @@ footer .footer-desk img {
   width: 30%;
 }
 
+/* Code restaurant */
 .previous-icon {
   font-size: x-large;
 }
@@ -193,38 +193,28 @@ footer .footer-desk img {
 .menu-head .fa-heart {
   font-size: xx-large;
 }
-
-/* Cacher la case à cocher par défaut */
-input[type=checkbox] {
+.menu-head input[type=checkbox] {
   position: absolute;
   opacity: 1;
 }
-
-/* Style du label (bouton de la checkbox) */
-label {
+.menu-head label {
   display: inline-block;
-  /* Couleur de fond initiale */
-  color: black; /* Couleur du texte */
+  color: black;
   cursor: pointer;
 }
-label .checked {
+.menu-head label .checked {
   opacity: 0;
   position: relative;
   right: 36px;
 }
-label .unchecked {
+.menu-head label .unchecked {
   color: #353535;
 }
-
-/* Changer la couleur de fond lorsque la case est cochée */
-input[type=checkbox]:checked + label {
-  /* Nouvelle couleur de fond lorsque cochée */
-}
-input[type=checkbox]:checked + label .checkmark .checked {
+.menu-head input[type=checkbox]:checked + label .checkmark .checked {
   color: #9356dc;
   opacity: 1;
 }
-input[type=checkbox]:checked + label .checkmark .unchecked {
+.menu-head input[type=checkbox]:checked + label .checkmark .unchecked {
   opacity: 0;
 }
 
@@ -275,6 +265,17 @@ input[type=checkbox]:checked + label .checkmark .unchecked {
   justify-content: center;
 }
 
+@keyframes sliding {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 10%;
+  }
+  100% {
+    width: 20%;
+  }
+}
 .check-hover {
   display: flex;
 }
@@ -296,17 +297,6 @@ input[type=checkbox]:checked + label .checkmark .unchecked {
   display: none;
 }
 
-@keyframes sliding {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 10%;
-  }
-  100% {
-    width: 20%;
-  }
-}
 /* Desktop */
 @media screen and (min-width: 768px) {
   header img {
@@ -388,6 +378,9 @@ input[type=checkbox]:checked + label .checkmark .unchecked {
   .menu .menu-details {
     width: 95%;
   }
+  .menu .menu-details p {
+    margin-inline-end: 2em;
+  }
   .menu .menu-head {
     justify-content: center;
     gap: 3em;
@@ -395,26 +388,22 @@ input[type=checkbox]:checked + label .checkmark .unchecked {
   .menu .menu-align {
     margin-inline: 10%;
   }
-  .menu-details p {
-    margin-inline-end: 2em;
+  .check-hover {
+    display: flex;
   }
-}
-.check-hover {
-  display: flex;
-}
-.check-hover:hover .check {
-  animation: sliding-desk 400ms linear;
-  width: 15%;
-}
-
-@keyframes sliding-desk {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 7.5%;
-  }
-  100% {
+  .check-hover:hover .check {
+    animation: sliding-desk 400ms linear;
     width: 15%;
+  }
+  @keyframes sliding-desk {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 7.5%;
+    }
+    100% {
+      width: 15%;
+    }
   }
 }/*# sourceMappingURL=style.css.map */
