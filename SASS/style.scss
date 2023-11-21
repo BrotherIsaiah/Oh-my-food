@@ -11,6 +11,10 @@ $background-color: #f6f6f6;
     color: white;
     text-decoration: none;
   }
+  &:hover{
+    filter: brightness(1.2);
+    box-shadow: (0px 4px 10px 0px rgba(0, 0, 0, 0.55)) 
+  }
 }
 
 @mixin fonctionnement {
@@ -40,6 +44,12 @@ $background-color: #f6f6f6;
   align-items: center;
 }
 
+@mixin cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 /* Code */
 * {
   font-family: "Raleway", sans-serif;
@@ -48,12 +58,71 @@ $background-color: #f6f6f6;
 
 body {
   margin: 0;
+ 
+  .content {
+   
+    
+    position: relative;
+    
+    .loader-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 4;
+      background: white;
+      transition: opacity 300ms linear 5s, visibility 300ms linear 5s;
+      opacity: 0;
+      visibility: hidden;
+      .loader {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 8px solid #9356dc;
+        border-right-color: #ff79da;
+        animation: l2 5s infinite linear;
+       
+      }
+    }
+  }
+  
+  
+  
 }
+
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes page-loading {
+  from {
+    
+    opacity: 0;
+  }
+  to {
+    
+    opacity: 1;
+  }
+}
+
+@keyframes hideElement {
+  0% {
+    opacity: 1; /* Opacité initiale à 100% */
+  }
+  100% {
+    opacity: 0; /* Opacité finale à 0% */
+    visibility: hidden; /* Éléments caché (non cliquable, non interactif) */
+  }
+}
+
 .localisation {
   background-color: $location-color;
   @include icon-info;
   color: #353535;
-  
 }
 
 header {
@@ -80,20 +149,19 @@ h1 {
   }
 }
 
-.margin-button{
+.margin-button {
   margin-block: 3em;
 }
+
+.explore-order {
   
-  .explore-order {
-    @include button-link;
-    background: $button-form;
-    color: white;
+  @include button-link;
+  background: $button-form;
+  color: white;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
-  }
-
-
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
 
 .function-section {
   display: grid;
@@ -114,13 +182,19 @@ h1 {
   position: relative;
   top: 48px;
   margin-left: -8px;
+  z-index: 2;
 }
 
 .fonctionnement {
   @include fonctionnement;
   @include icon-info;
   background: $background-color;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  p{
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
 }
 
 .resto-section {
@@ -177,7 +251,7 @@ footer {
     li {
       display: flex;
       gap: 10px;
-      a{
+      a {
         text-decoration: none;
         color: white;
         display: flex;
@@ -224,7 +298,7 @@ footer {
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
-  .menu-title {
+  .menu-logo {
     font: 2.2rem "Shrikhand";
     text-align: center;
   }
@@ -269,16 +343,27 @@ footer {
   margin-inline: 5%;
 }
 
-.menu-section {
+.menu-title {
   width: 2em;
   display: inline-block;
   border-bottom: solid #99e2d0;
 }
 
-.menu-cards {
+.menu-cards-entree {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  animation: loading 1500ms linear;
+}
+
+.menu-cards-plats {
+  @include cards;
+  animation: loading 1800ms linear;
+}
+
+.menu-cards-dessert {
+  @include cards;
+  animation: loading 2100ms linear;
 }
 
 .menu-details {
@@ -292,10 +377,18 @@ footer {
   margin-right: -5%;
   & h3 {
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   & p {
     margin: 0;
     margin-inline-end: 1em;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
   }
 }
 
@@ -325,6 +418,23 @@ footer {
   }
 }
 
+@keyframes loading {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .check-hover {
   display: flex;
 
@@ -339,6 +449,7 @@ footer {
       background: #99e2d0;
       font-size: 2.5em;
       color: white;
+
       .fa-circle-check {
         display: inline;
       }
