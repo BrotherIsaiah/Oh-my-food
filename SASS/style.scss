@@ -302,41 +302,38 @@ footer {
     font: 2.2rem "Shrikhand";
     text-align: center;
   }
-  .fa-heart {
-    font-size: xx-large;
-  }
-
-  input[type="checkbox"] {
-    position: absolute;
-    opacity: 1;
-  }
-
-  label {
-    display: inline-block;
-    color: black;
-    cursor: pointer;
-    .checked {
-      opacity: 0;
-      position: relative;
-      right: 36px;
+  
+  input[type="checkbox"]{
+  display: inline;
+  &:checked + label{
+    transition: 300ms linear ;
+    background: linear-gradient(#ff79da, #9356dc);
+    background-clip: text;
+    color: transparent;
+    .fa-regular{
+      display: none;
     }
-    .unchecked {
+  }
+  &:not(:checked) + label{
+    .fa-regular{
       color: #353535;
     }
+.fa-solid{
+  display: none;
+}
+  }
+  }
+ 
+  label{
+    font-size: xx-large;
+
+  }
+  
+  
   }
 
-  input[type="checkbox"]:checked + label {
-    .checkmark {
-      .checked {
-        color: #9356dc;
-        opacity: 1;
-      }
-      .unchecked {
-        opacity: 0;
-      }
-    }
-  }
-}
+
+
 
 .menu-align {
   display: grid;

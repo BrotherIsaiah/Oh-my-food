@@ -263,32 +263,27 @@ footer .footer-desk img {
   font: 2.2rem "Shrikhand";
   text-align: center;
 }
-.menu-head .fa-heart {
-  font-size: xx-large;
-}
 .menu-head input[type=checkbox] {
-  position: absolute;
-  opacity: 1;
+  display: inline;
 }
-.menu-head label {
-  display: inline-block;
-  color: black;
-  cursor: pointer;
+.menu-head input[type=checkbox]:checked + label {
+  transition: 300ms linear;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
-.menu-head label .checked {
-  opacity: 0;
-  position: relative;
-  right: 36px;
+.menu-head input[type=checkbox]:checked + label .fa-regular {
+  display: none;
 }
-.menu-head label .unchecked {
+.menu-head input[type=checkbox]:not(:checked) + label .fa-regular {
   color: #353535;
 }
-.menu-head input[type=checkbox]:checked + label .checkmark .checked {
-  color: #9356dc;
-  opacity: 1;
+.menu-head input[type=checkbox]:not(:checked) + label .fa-solid {
+  display: none;
 }
-.menu-head input[type=checkbox]:checked + label .checkmark .unchecked {
-  opacity: 0;
+.menu-head label {
+  font-size: xx-large;
 }
 
 .menu-align {
