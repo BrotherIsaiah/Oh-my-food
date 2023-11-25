@@ -11,9 +11,9 @@ $background-color: #f6f6f6;
     color: white;
     text-decoration: none;
   }
-  &:hover{
+  &:hover {
     filter: brightness(1.2);
-    box-shadow: (0px 4px 10px 0px rgba(0, 0, 0, 0.55)) 
+    box-shadow: (0px 4px 10px 0px rgba(0, 0, 0, 0.55));
   }
 }
 
@@ -58,12 +58,8 @@ $background-color: #f6f6f6;
 
 body {
   margin: 0;
- 
   .content {
-   
-    
     position: relative;
-    
     .loader-wrapper {
       display: flex;
       align-items: center;
@@ -83,13 +79,9 @@ body {
         border: 8px solid #9356dc;
         border-right-color: #ff79da;
         animation: l2 5s infinite linear;
-       
       }
     }
   }
-  
-  
-  
 }
 
 @keyframes l2 {
@@ -100,22 +92,20 @@ body {
 
 @keyframes page-loading {
   from {
-    
     opacity: 0;
   }
   to {
-    
     opacity: 1;
   }
 }
 
 @keyframes hideElement {
   0% {
-    opacity: 1; /* Opacité initiale à 100% */
+    opacity: 1;
   }
   100% {
-    opacity: 0; /* Opacité finale à 0% */
-    visibility: hidden; /* Éléments caché (non cliquable, non interactif) */
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -127,7 +117,7 @@ body {
 
 header {
   img {
-    margin-inline: 20%;
+    margin-inline: 23%;
     padding: 1em;
     width: 50%;
     height: 30%;
@@ -154,7 +144,6 @@ h1 {
 }
 
 .explore-order {
-  
   @include button-link;
   background: $button-form;
   color: white;
@@ -190,10 +179,10 @@ h1 {
   @include icon-info;
   background: $background-color;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  p{
+  p {
     overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
@@ -201,16 +190,16 @@ h1 {
   background: $background-color;
   display: grid;
   padding: 1em;
+}
+
+.restaurant {
+  @include resto-card;
   img {
     width: 100%;
     height: 130px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
   }
-}
-
-.restaurant {
-  @include resto-card;
 }
 
 .resto-cards {
@@ -222,6 +211,15 @@ h1 {
     text-decoration: none;
     color: black;
   }
+  .new-restaurant {
+    p {
+      width: fit-content;
+      background: aquamarine;
+      padding: 0.5em;
+      position: absolute;
+      left: 70%;
+    }
+  }
 }
 
 .card-content {
@@ -229,7 +227,27 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding-inline: 1em;
-  .fa-heart {
+  input[type="checkbox"] {
+    display: none;
+    &:checked + label {
+      transition: 300ms linear;
+      background: linear-gradient(#ff79da, #9356dc);
+      background-clip: text;
+      color: transparent;
+      .fa-regular {
+        display: none;
+      }
+    }
+    &:not(:checked) + label {
+      .fa-regular {
+        color: #353535;
+      }
+      .fa-solid {
+        display: none;
+      }
+    }
+  }
+  label {
     font-size: xx-large;
   }
 }
@@ -302,39 +320,28 @@ footer {
     font: 2.2rem "Shrikhand";
     text-align: center;
   }
-  .fa-heart {
-    font-size: xx-large;
-  }
-
   input[type="checkbox"] {
-    position: absolute;
-    opacity: 1;
+    display: none;
+    &:checked + label {
+      transition: 300ms linear;
+      background: linear-gradient(#ff79da, #9356dc);
+      background-clip: text;
+      color: transparent;
+      .fa-regular {
+        display: none;
+      }
+    }
+    &:not(:checked) + label {
+      .fa-regular {
+        color: #353535;
+      }
+      .fa-solid {
+        display: none;
+      }
+    }
   }
-
   label {
-    display: inline-block;
-    color: black;
-    cursor: pointer;
-    .checked {
-      opacity: 0;
-      position: relative;
-      right: 36px;
-    }
-    .unchecked {
-      color: #353535;
-    }
-  }
-
-  input[type="checkbox"]:checked + label {
-    .checkmark {
-      .checked {
-        color: #9356dc;
-        opacity: 1;
-      }
-      .unchecked {
-        opacity: 0;
-      }
-    }
+    font-size: xx-large;
   }
 }
 
@@ -384,11 +391,9 @@ footer {
   & p {
     margin: 0;
     margin-inline-end: 1em;
-    
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    
   }
 }
 
@@ -399,9 +404,12 @@ footer {
 }
 
 .order {
-  padding-block: 1em;
+  padding-block: 2em;
   display: flex;
   justify-content: center;
+  a {
+    text-decoration: none;
+  }
 }
 
 @keyframes sliding {
@@ -437,7 +445,6 @@ footer {
 
 .check-hover {
   display: flex;
-
   &:hover {
     .check {
       animation: sliding 400ms linear;
@@ -449,7 +456,6 @@ footer {
       background: #99e2d0;
       font-size: 2.5em;
       color: white;
-
       .fa-circle-check {
         display: inline;
       }
@@ -465,7 +471,6 @@ footer {
 @media screen and (min-width: 768px) {
   header img {
     margin: 0 40%;
-
     width: 20%;
   }
 
@@ -473,7 +478,6 @@ footer {
     h1 {
       font-size: xxx-large;
     }
-
     p {
       color: #353535;
     }
@@ -519,6 +523,14 @@ footer {
     justify-content: space-between;
     width: 100%;
     grid-template-columns: 1fr 1fr;
+    .new-restaurant {
+      p {
+        position: relative;
+        left: 75%;
+        margin-block: -18px;
+        top: 20%;
+      }
+    }
   }
 
   .restaurant {
@@ -567,7 +579,6 @@ footer {
       margin-inline: 10%;
     }
   }
-
   .check-hover {
     display: flex;
     &:hover {
