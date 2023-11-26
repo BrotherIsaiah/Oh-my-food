@@ -39,23 +39,6 @@ body .content .loader-wrapper .loader {
     transform: rotate(1turn);
   }
 }
-@keyframes page-loading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes hideElement {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 .localisation {
   background-color: #eaeaea;
   text-align: center;
@@ -174,12 +157,18 @@ h1 {
   flex-direction: column;
   margin: 0 20px 0 20px;
 }
+.resto-cards .restaurant .new-restaurant {
+  position: relative;
+}
 .resto-cards .restaurant .new-restaurant p {
   width: -moz-fit-content;
   width: fit-content;
   background: aquamarine;
   position: absolute;
   left: 70%;
+  background: #99E2D0;
+  color: #008766;
+  padding: 0.5em;
 }
 .resto-cards .restaurant img {
   width: 100%;
@@ -199,7 +188,7 @@ h1 {
   display: none;
 }
 .card-content input[type=checkbox]:checked + label {
-  transition: 300ms linear;
+  transition: 200ms linear;
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
@@ -479,6 +468,9 @@ footer .footer-desk img {
   }
   .restaurant {
     margin-inline-start: 10%;
+  }
+  .restaurant .new-restaurant p {
+    left: 75%;
   }
   footer {
     display: flex;
