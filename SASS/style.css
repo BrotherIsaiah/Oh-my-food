@@ -27,11 +27,11 @@ body .content .loader-wrapper {
 }
 body .content .loader-wrapper .loader {
   width: 50px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   border: 8px solid #9356dc;
   border-right-color: #ff79da;
-  animation: l2 5s infinite linear;
+  animation: l2 3s infinite linear;
 }
 
 @keyframes l2 {
@@ -280,7 +280,7 @@ footer .footer-desk img {
   display: none;
 }
 .menu-head input[type=checkbox]:checked + label {
-  transition: 300ms linear;
+  transition: 200ms linear;
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
