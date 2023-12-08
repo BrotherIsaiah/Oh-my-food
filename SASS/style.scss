@@ -185,6 +185,14 @@ h1 {
   }
   .restaurant {
     @include resto-card;
+    .contentAndCheckbox{
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+  label{
+    margin-inline-end: 5%;
+  }
+}
     .new-restaurant {
       position: relative;
       p {
@@ -203,6 +211,29 @@ h1 {
       object-fit: cover;
       border-radius: 20px 20px 0 0;
     }
+    input[type="checkbox"] {
+      display: none;
+      &:checked + label {
+        transition: 200ms linear;
+        background: linear-gradient(#ff79da, #9356dc);
+        background-clip: text;
+        color: transparent;
+        .fa-regular {
+          display: none;
+        }
+      }
+      &:not(:checked) + label {
+        .fa-regular {
+          color: #353535;
+        }
+        .fa-solid {
+          display: none;
+        }
+      }
+    }
+    label {
+      font-size: xx-large;
+    }
   }
 }
 
@@ -211,29 +242,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding-inline: 1em;
-  input[type="checkbox"] {
-    display: none;
-    &:checked + label {
-      transition: 200ms linear;
-      background: linear-gradient(#ff79da, #9356dc);
-      background-clip: text;
-      color: transparent;
-      .fa-regular {
-        display: none;
-      }
-    }
-    &:not(:checked) + label {
-      .fa-regular {
-        color: #353535;
-      }
-      .fa-solid {
-        display: none;
-      }
-    }
-  }
-  label {
-    font-size: xx-large;
-  }
+  
 }
 
 footer {

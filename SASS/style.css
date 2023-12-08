@@ -157,6 +157,14 @@ h1 {
   flex-direction: column;
   margin: 0 20px 0 20px;
 }
+.resto-cards .restaurant .contentAndCheckbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resto-cards .restaurant .contentAndCheckbox label {
+  margin-inline-end: 5%;
+}
 .resto-cards .restaurant .new-restaurant {
   position: relative;
 }
@@ -177,34 +185,34 @@ h1 {
      object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-
-.card-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 1em;
-}
-.card-content input[type=checkbox] {
+.resto-cards .restaurant input[type=checkbox] {
   display: none;
 }
-.card-content input[type=checkbox]:checked + label {
+.resto-cards .restaurant input[type=checkbox]:checked + label {
   transition: 200ms linear;
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
 }
-.card-content input[type=checkbox]:checked + label .fa-regular {
+.resto-cards .restaurant input[type=checkbox]:checked + label .fa-regular {
   display: none;
 }
-.card-content input[type=checkbox]:not(:checked) + label .fa-regular {
+.resto-cards .restaurant input[type=checkbox]:not(:checked) + label .fa-regular {
   color: #353535;
 }
-.card-content input[type=checkbox]:not(:checked) + label .fa-solid {
+.resto-cards .restaurant input[type=checkbox]:not(:checked) + label .fa-solid {
   display: none;
 }
-.card-content label {
+.resto-cards .restaurant label {
   font-size: xx-large;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1em;
 }
 
 footer {
