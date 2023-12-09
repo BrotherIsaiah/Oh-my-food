@@ -27,7 +27,7 @@ body .content .loader-wrapper {
 }
 body .content .loader-wrapper .loader {
   width: 50px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   border: 8px solid #9356dc;
   border-right-color: #ff79da;
